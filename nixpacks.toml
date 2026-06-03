@@ -1,0 +1,2 @@
+[phases.build]
+cmds = ["cp -r /app/projects /app/projects_bundle"]

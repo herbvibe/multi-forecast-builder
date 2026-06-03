@@ -1,11 +1,11 @@
 #!/bin/bash
-# Seed the persistent volume with bundled projects on first boot.
-# The volume is mounted at /app/projects and starts empty, which would
-# shadow the projects/ directory baked into the image.  Copy them over
-# once so the app has its default projects available immediately.
+set -e
 
 BUNDLE_DIR="/app/projects_bundle"
 VOLUME_DIR="/app/projects"
+
+echo "[start] Bundle dir exists: $([ -d "$BUNDLE_DIR" ] && echo YES || echo NO)"
+echo "[start] Volume dir contents: $(ls "$VOLUME_DIR" 2>/dev/null || echo EMPTY)"
 
 if [ -d "$BUNDLE_DIR" ]; then
     for proj in "$BUNDLE_DIR"/*/; do
@@ -17,7 +17,11 @@ if [ -d "$BUNDLE_DIR" ]; then
             echo "[start] Project '$proj_id' already on volume, skipping."
         fi
     done
+else
+    echo "[start] WARNING: projects_bundle not found — volume will be empty"
 fi
+
+echo "[start] Final projects on volume: $(ls "$VOLUME_DIR" 2>/dev/null || echo NONE)"
 
 exec streamlit run app.py \
     --server.port "$PORT" \

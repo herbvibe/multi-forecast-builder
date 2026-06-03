@@ -1,8 +1,5 @@
 [build]
 builder = "nixpacks"
-# Copy projects/ to projects_bundle/ during build so the volume mount at
-# /app/projects doesn't shadow the bundled demo projects.
-buildCommand = "cp -r projects projects_bundle && chmod +x start.sh"
 
 [deploy]
 startCommand = "bash start.sh"
