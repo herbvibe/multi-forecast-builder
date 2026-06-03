@@ -1,0 +1,14 @@
+{
+  "id": "flensburg",
+  "name": "Flensburg",
+  "city": "Flensburg",
+  "lat": 54.78805,
+  "lon": 9.43722,
+  "timezone": "Europe/Berlin",
+  "demand_unit": "MW",
+  "target_column": "heat_demand_mw",
+  "created_at": "2026-06-03T19:20:32Z",
+  "stage": "awaiting_training",
+  "test_start": "2026-03-16",
+  "country_code": "DE"
+}

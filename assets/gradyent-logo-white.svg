@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 52" role="img" aria-label="Gradyent">
+  <defs>
+    <linearGradient id="gGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#E31B54"/>
+      <stop offset="55%" stop-color="#7B2CBF"/>
+      <stop offset="100%" stop-color="#2EC4B6"/>
+    </linearGradient>
+  </defs>
+  <polygon
+    points="26,4 44,14 44,34 26,44 8,34 8,14"
+    fill="none"
+    stroke="url(#gGrad)"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M30 18 C30 14 27 12 23 12 C18 12 15 15 15 20 C15 28 21 32 28 32 C31 32 33 31 35 29"
+    fill="none"
+    stroke="url(#gGrad)"
+    stroke-width="2.4"
+    stroke-linecap="round"
+  />
+  <path
+    d="M22 24 L32 24"
+    fill="none"
+    stroke="url(#gGrad)"
+    stroke-width="2.4"
+    stroke-linecap="round"
+  />
+  <text
+    x="56"
+    y="34"
+    font-family="Inter, Arial, sans-serif"
+    font-size="24"
+    font-weight="600"
+    fill="#FFFFFF"
+    letter-spacing="-0.5"
+  >Gradyent</text>
+</svg>

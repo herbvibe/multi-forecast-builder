@@ -1,0 +1,49 @@
+---
+description: Project context and conventions for the district-heating-forecaster dashboard
+alwaysApply: true
+---
+
+# District Heating Forecaster — Project Context
+
+## What this app is
+Streamlit dashboard (`app.py`) for Flensburg district heating demand forecasting.
+- **Model**: 48 direct LightGBM models, one per horizon h=1…48h
+- **Confidence bands**: Monte Carlo with NWP σ(h) noise, 80% CI
+- **Weather**: Open-Meteo API (live NWP) or fallback to observed CSV data
+- **Dataset**: Zenodo 17177421 · 2020–2024 · train 2020–2023 · test 2024
+- **Repo**: https://github.com/herbvibe/district-heating-forecaster
+
+## Architecture (`src/`)
+- `data.py` — raw CSV loading, feature engineering (`MH_FEATURES`, 25–30 cols)
+- `model.py` — `simulate_forecast()`, `compute_mape()`, `BEST_PARAMS`
+- `model_registry.py` — JSON-backed model version registry
+- `weather.py` — Open-Meteo wrapper (forecast + historical endpoints)
+- `train_multi_horizon.py` — CLI to retrain all 48 models
+
+## Hard constraints
+- `MH_FEATURES` is fixed — adding/removing features requires retraining all 48 models
+- `init()` uses `@st.cache_resource` — **server must be fully restarted** after retraining
+- Never work directly on `main`; branch first (`feature/` or `experiment/` prefix)
+- Production inference path is always `get_mh_forecast_window()` — never extend the legacy single-model fallback
+
+## Brand / UI conventions
+**Palette constants** (defined near top of `app.py`):
+- `NAVY #11224D` — primary text, history lines
+- `PINK #E31B54` — accent, temperature axis
+- `TEAL #2EC4B6` — wind speed, `ACCENT2`
+- `PURPLE #7B2CBF` — humidity, override zones
+- `FORECAST #263884` — demand forecast median + CI band
+- `NOW_COL GRAY_MID` — "now" vertical line (grey)
+- `FORECAST_SHADE rgba(17,34,77,0.07)` — light grey fill right of "now"
+- `BAND_COL rgba(38,56,132,0.18)` — 80% CI fill
+
+**Font**: Inter (Google Fonts), loaded via `_inject_brand_styles()`
+
+**Logo**: `assets/gradyent-logo.svg` (official SVG from gradyent.ai, navy wordmark)
+
+## Layout
+- **Header**: logo (left) + "Heating Demand Forecast - Flensburg" (right of logo)
+- **Sidebar top**: Avg MAPE + Avg MAE metrics → model version selector → snapshot date/hour → weather toggle → retrain expander
+- **Sidebar bottom**: plain caption rows (snapshot, horizon, model, training info)
+- **Main area**: header row → KPI metrics → Plotly chart (3 subplots: demand / temp+wind / cloud+humidity) → horizon toggle → manual override expander
+- **Chart legends**: transparent background (no white boxes)

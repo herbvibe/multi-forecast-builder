@@ -1,0 +1,487 @@
+{
+  "id": "flensburg-multi-substations",
+  "name": "Flensburg multi-substations",
+  "city": "Flensburg",
+  "lat": 54.78805,
+  "lon": 9.43722,
+  "timezone": "Europe/Berlin",
+  "demand_unit": "MW",
+  "target_column": "total_demand_mw",
+  "created_at": "2026-06-03T19:25:22Z",
+  "stage": "awaiting_training",
+  "test_start": "2026-03-16",
+  "country_code": "DE",
+  "mode": "multi",
+  "substations": [
+    {
+      "id": "fsu-1-apenrader-stra",
+      "name": "FS\u00dc 1 Apenrader Stra",
+      "column": "FS\u00dc 1 Apenrader Stra"
+    },
+    {
+      "id": "fsu-10-klueser-winke",
+      "name": "FS\u00dc 10 Klueser Winke",
+      "column": "FS\u00dc 10 Klueser Winke"
+    },
+    {
+      "id": "fsu-100-mummsche-koppel",
+      "name": "FS\u00dc 100 Mummsche Koppel",
+      "column": "FS\u00dc 100 Mummsche Koppel"
+    },
+    {
+      "id": "fsu-101-schwarzental",
+      "name": "FS\u00dc 101 Schwarzental",
+      "column": "FS\u00dc 101 Schwarzental"
+    },
+    {
+      "id": "fsu-11-an-der-reitba",
+      "name": "FS\u00dc 11 An der Reitba",
+      "column": "FS\u00dc 11 An der Reitba"
+    },
+    {
+      "id": "fsu-12-jens-due-stra",
+      "name": "FS\u00dc 12 Jens Due Stra",
+      "column": "FS\u00dc 12 Jens Due Stra"
+    },
+    {
+      "id": "fsu-13-gaussweg",
+      "name": "FS\u00dc 13 Gaussweg",
+      "column": "FS\u00dc 13 Gaussweg"
+    },
+    {
+      "id": "fsu-14-frosleerhof",
+      "name": "FS\u00dc 14 Fr\u00f6sleerhof",
+      "column": "FS\u00dc 14 Fr\u00f6sleerhof"
+    },
+    {
+      "id": "fsu-15-batteriestras",
+      "name": "FS\u00dc 15 Batteriestras",
+      "column": "FS\u00dc 15 Batteriestras"
+    },
+    {
+      "id": "fsu-16-phil-lassen-k",
+      "name": "FS\u00dc 16 Phil Lassen K",
+      "column": "FS\u00dc 16 Phil Lassen K"
+    },
+    {
+      "id": "fsu-17-travestrasse",
+      "name": "FS\u00dc 17 Travestrasse",
+      "column": "FS\u00dc 17 Travestrasse"
+    },
+    {
+      "id": "fsu-18-jahnstrasse",
+      "name": "FS\u00dc 18 Jahnstrasse",
+      "column": "FS\u00dc 18 Jahnstrasse"
+    },
+    {
+      "id": "fsu-19-glucksburger",
+      "name": "FS\u00dc 19 Gl\u00fccksburger",
+      "column": "FS\u00dc 19 Gl\u00fccksburger"
+    },
+    {
+      "id": "fsu-2-thomas-mann-st",
+      "name": "FS\u00dc 2 Thomas Mann St",
+      "column": "FS\u00dc 2 Thomas Mann St"
+    },
+    {
+      "id": "fsu-20-heinrich-schu",
+      "name": "FS\u00dc 20 Heinrich Schu",
+      "column": "FS\u00dc 20 Heinrich Schu"
+    },
+    {
+      "id": "fsu-21-hermann-lons",
+      "name": "FS\u00dc 21 Hermann-L\u00f6ns-",
+      "column": "FS\u00dc 21 Hermann-L\u00f6ns-"
+    },
+    {
+      "id": "fsu-22-fruelunder-st",
+      "name": "FS\u00dc 22 Fruelunder St",
+      "column": "FS\u00dc 22 Fruelunder St"
+    },
+    {
+      "id": "fsu-23-kirchentoft",
+      "name": "FS\u00dc 23 Kirchentoft",
+      "column": "FS\u00dc 23 Kirchentoft"
+    },
+    {
+      "id": "fsu-24-merkurstrasse",
+      "name": "FS\u00dc 24 Merkurstrasse",
+      "column": "FS\u00dc 24 Merkurstrasse"
+    },
+    {
+      "id": "fsu-25-lornsenstrass",
+      "name": "FS\u00dc 25 Lornsenstrass",
+      "column": "FS\u00dc 25 Lornsenstrass"
+    },
+    {
+      "id": "fsu-26-fruhlingsboge",
+      "name": "FS\u00dc 26 Fr\u00fchlingsboge",
+      "column": "FS\u00dc 26 Fr\u00fchlingsboge"
+    },
+    {
+      "id": "fsu-27-kate-lassen-s",
+      "name": "FS\u00dc 27 K\u00e4te Lassen S",
+      "column": "FS\u00dc 27 K\u00e4te Lassen S"
+    },
+    {
+      "id": "fsu-28-st-jurgenstra",
+      "name": "FS\u00dc 28 St J\u00fcrgenstra",
+      "column": "FS\u00dc 28 St J\u00fcrgenstra"
+    },
+    {
+      "id": "fsu-3-sunderuper-weg",
+      "name": "FS\u00dc 3 S\u00fcnderuper Weg",
+      "column": "FS\u00dc 3 S\u00fcnderuper Weg"
+    },
+    {
+      "id": "fsu-30-alsterbogen",
+      "name": "FS\u00dc 30 Alsterbogen",
+      "column": "FS\u00dc 30 Alsterbogen"
+    },
+    {
+      "id": "fsu-31-twedter-feld",
+      "name": "FS\u00dc 31 Twedter Feld",
+      "column": "FS\u00dc 31 Twedter Feld"
+    },
+    {
+      "id": "fsu-32-schule-friedh",
+      "name": "FS\u00dc 32 Schule Friedh",
+      "column": "FS\u00dc 32 Schule Friedh"
+    },
+    {
+      "id": "fsu-33-zypressenweg",
+      "name": "FS\u00dc 33 Zypressenweg",
+      "column": "FS\u00dc 33 Zypressenweg"
+    },
+    {
+      "id": "fsu-34-speicherlinie",
+      "name": "FS\u00dc 34 Speicherlinie",
+      "column": "FS\u00dc 34 Speicherlinie"
+    },
+    {
+      "id": "fsu-36-marienkirche",
+      "name": "FS\u00dc 36 Marienkirche",
+      "column": "FS\u00dc 36 Marienkirche"
+    },
+    {
+      "id": "fsu-37-segelmacher-s",
+      "name": "FS\u00dc 37 Segelmacher S",
+      "column": "FS\u00dc 37 Segelmacher S"
+    },
+    {
+      "id": "fsu-39-wilhelm-busch",
+      "name": "FS\u00dc 39 Wilhelm-Busch",
+      "column": "FS\u00dc 39 Wilhelm-Busch"
+    },
+    {
+      "id": "fsu-4-industrieweg-g",
+      "name": "FS\u00dc 4 Industrieweg G",
+      "column": "FS\u00dc 4 Industrieweg G"
+    },
+    {
+      "id": "fsu-40-eschenweg",
+      "name": "FS\u00dc 40 Eschenweg",
+      "column": "FS\u00dc 40 Eschenweg"
+    },
+    {
+      "id": "fsu-41-stadtpark",
+      "name": "FS\u00dc 41 Stadtpark",
+      "column": "FS\u00dc 41 Stadtpark"
+    },
+    {
+      "id": "fsu-42-am-bauernhof",
+      "name": "FS\u00dc 42 Am Bauernhof",
+      "column": "FS\u00dc 42 Am Bauernhof"
+    },
+    {
+      "id": "fsu-43-schule-falken",
+      "name": "FS\u00dc 43 Schule Falken",
+      "column": "FS\u00dc 43 Schule Falken"
+    },
+    {
+      "id": "fsu-44-forsterstieg",
+      "name": "FS\u00dc 44 F\u00f6rsterstieg",
+      "column": "FS\u00dc 44 F\u00f6rsterstieg"
+    },
+    {
+      "id": "fsu-45-weserstrasse",
+      "name": "FS\u00dc 45 Weserstrasse",
+      "column": "FS\u00dc 45 Weserstrasse"
+    },
+    {
+      "id": "fsu-46-sigurdstrasse",
+      "name": "FS\u00dc 46 Sigurdstrasse",
+      "column": "FS\u00dc 46 Sigurdstrasse"
+    },
+    {
+      "id": "fsu-48-wiesenweg",
+      "name": "FS\u00dc 48 Wiesenweg",
+      "column": "FS\u00dc 48 Wiesenweg"
+    },
+    {
+      "id": "fsu-49-sudermoor-har",
+      "name": "FS\u00dc 49 S\u00fcdermoor Har",
+      "column": "FS\u00dc 49 S\u00fcdermoor Har"
+    },
+    {
+      "id": "fsu-5-michelsenstras",
+      "name": "FS\u00dc 5 Michelsenstras",
+      "column": "FS\u00dc 5 Michelsenstras"
+    },
+    {
+      "id": "fsu-50-am-dammhof",
+      "name": "FS\u00dc 50 Am Dammhof",
+      "column": "FS\u00dc 50 Am Dammhof"
+    },
+    {
+      "id": "fsu-51-willy-sander",
+      "name": "FS\u00dc 51 Willy-Sander-",
+      "column": "FS\u00dc 51 Willy-Sander-"
+    },
+    {
+      "id": "fsu-52-osterlucken",
+      "name": "FS\u00dc 52 Osterl\u00fccken",
+      "column": "FS\u00dc 52 Osterl\u00fccken"
+    },
+    {
+      "id": "fsu-53-alter-husumer",
+      "name": "FS\u00dc 53 Alter Husumer",
+      "column": "FS\u00dc 53 Alter Husumer"
+    },
+    {
+      "id": "fsu-54-solituder-str",
+      "name": "FS\u00dc 54 Solit\u00fcder Str",
+      "column": "FS\u00dc 54 Solit\u00fcder Str"
+    },
+    {
+      "id": "fsu-55-stadtwerke-ve",
+      "name": "FS\u00dc 55 Stadtwerke Ve",
+      "column": "FS\u00dc 55 Stadtwerke Ve"
+    },
+    {
+      "id": "fsu-56-twedter-berg",
+      "name": "FS\u00dc 56 Twedter Berg",
+      "column": "FS\u00dc 56 Twedter Berg"
+    },
+    {
+      "id": "fsu-57-vor-der-koppe",
+      "name": "FS\u00dc 57 Vor der Koppe",
+      "column": "FS\u00dc 57 Vor der Koppe"
+    },
+    {
+      "id": "fsu-58-schule-weiche",
+      "name": "FS\u00dc 58 Schule Weiche",
+      "column": "FS\u00dc 58 Schule Weiche"
+    },
+    {
+      "id": "fsu-59-sonwik",
+      "name": "FS\u00dc 59 Sonwik",
+      "column": "FS\u00dc 59 Sonwik"
+    },
+    {
+      "id": "fsu-6-altes-gymnasiu",
+      "name": "FS\u00dc 6 Altes Gymnasiu",
+      "column": "FS\u00dc 6 Altes Gymnasiu"
+    },
+    {
+      "id": "fsu-60-prof-mensings",
+      "name": "FS\u00dc 60 Prof-Mensings",
+      "column": "FS\u00dc 60 Prof-Mensings"
+    },
+    {
+      "id": "fsu-61-alter-kupferm",
+      "name": "FS\u00dc 61 Alter Kupferm",
+      "column": "FS\u00dc 61 Alter Kupferm"
+    },
+    {
+      "id": "fsu-62-kleine-lucke",
+      "name": "FS\u00dc 62 Kleine L\u00fccke",
+      "column": "FS\u00dc 62 Kleine L\u00fccke"
+    },
+    {
+      "id": "fsu-63-fuchskuhle",
+      "name": "FS\u00dc 63 Fuchskuhle",
+      "column": "FS\u00dc 63 Fuchskuhle"
+    },
+    {
+      "id": "fsu-64-schule-rude",
+      "name": "FS\u00dc 64 Schule Rude",
+      "column": "FS\u00dc 64 Schule Rude"
+    },
+    {
+      "id": "fsu-65-osterkoppel",
+      "name": "FS\u00dc 65 Osterkoppel",
+      "column": "FS\u00dc 65 Osterkoppel"
+    },
+    {
+      "id": "fsu-66-wassersleben",
+      "name": "FS\u00dc 66 Wassersleben",
+      "column": "FS\u00dc 66 Wassersleben"
+    },
+    {
+      "id": "fsu-67-trogelsbyer-w",
+      "name": "FS\u00dc 67 Tr\u00f6gelsbyer W",
+      "column": "FS\u00dc 67 Tr\u00f6gelsbyer W"
+    },
+    {
+      "id": "fsu-68-husumer-stras",
+      "name": "FS\u00dc 68 Husumer Stras",
+      "column": "FS\u00dc 68 Husumer Stras"
+    },
+    {
+      "id": "fsu-69-kreuzlucke",
+      "name": "FS\u00dc 69 Kreuzl\u00fccke",
+      "column": "FS\u00dc 69 Kreuzl\u00fccke"
+    },
+    {
+      "id": "fsu-71-albertinenhof",
+      "name": "FS\u00dc 71 Albertinenhof",
+      "column": "FS\u00dc 71 Albertinenhof"
+    },
+    {
+      "id": "fsu-72-norderluck",
+      "name": "FS\u00dc 72 Norderl\u00fcck",
+      "column": "FS\u00dc 72 Norderl\u00fcck"
+    },
+    {
+      "id": "fsu-73-zeisighof",
+      "name": "FS\u00dc 73 Zeisighof",
+      "column": "FS\u00dc 73 Zeisighof"
+    },
+    {
+      "id": "fsu-74-gesundheitsam",
+      "name": "FS\u00dc 74 Gesundheitsam",
+      "column": "FS\u00dc 74 Gesundheitsam"
+    },
+    {
+      "id": "fsu-75-dietrich-buxt",
+      "name": "FS\u00dc 75 Dietrich-Buxt",
+      "column": "FS\u00dc 75 Dietrich-Buxt"
+    },
+    {
+      "id": "fsu-76-wassersleben-sudblick",
+      "name": "FS\u00dc 76 Wassersleben S\u00fcdblick",
+      "column": "FS\u00dc 76 Wassersleben S\u00fcdblick"
+    },
+    {
+      "id": "fsu-77-ostlandring-h",
+      "name": "FS\u00dc 77 Ostlandring H",
+      "column": "FS\u00dc 77 Ostlandring H"
+    },
+    {
+      "id": "fsu-78-sandwigstrass",
+      "name": "FS\u00dc 78 Sandwigstrass",
+      "column": "FS\u00dc 78 Sandwigstrass"
+    },
+    {
+      "id": "fsu-79-bahnhofstrass",
+      "name": "FS\u00dc 79 Bahnhofstrass",
+      "column": "FS\u00dc 79 Bahnhofstrass"
+    },
+    {
+      "id": "fsu-8-ramsharde",
+      "name": "FS\u00dc 8 Ramsharde",
+      "column": "FS\u00dc 8 Ramsharde"
+    },
+    {
+      "id": "fsu-80-flensburger-s",
+      "name": "FS\u00dc 80 Flensburger S",
+      "column": "FS\u00dc 80 Flensburger S"
+    },
+    {
+      "id": "fsu-82-bremsberg-glb",
+      "name": "FS\u00dc 82 Bremsberg Glb",
+      "column": "FS\u00dc 82 Bremsberg Glb"
+    },
+    {
+      "id": "fsu-83-aeroallee-glb",
+      "name": "FS\u00dc 83 Aer\u00f6allee Glb",
+      "column": "FS\u00dc 83 Aer\u00f6allee Glb"
+    },
+    {
+      "id": "fsu-85-merveldstrass",
+      "name": "FS\u00dc 85 Merveldstrass",
+      "column": "FS\u00dc 85 Merveldstrass"
+    },
+    {
+      "id": "fsu-86-am-lautrupsba",
+      "name": "FS\u00dc 86 Am Lautrupsba",
+      "column": "FS\u00dc 86 Am Lautrupsba"
+    },
+    {
+      "id": "fsu-87-am-goldregen",
+      "name": "FS\u00dc 87 Am Goldregen",
+      "column": "FS\u00dc 87 Am Goldregen"
+    },
+    {
+      "id": "fsu-88-am-sophienhof",
+      "name": "FS\u00dc 88 Am Sophienhof",
+      "column": "FS\u00dc 88 Am Sophienhof"
+    },
+    {
+      "id": "fsu-89-solituder-bog",
+      "name": "FS\u00dc 89 Solit\u00fcder Bog",
+      "column": "FS\u00dc 89 Solit\u00fcder Bog"
+    },
+    {
+      "id": "fsu-9-martinsberg",
+      "name": "FS\u00dc 9 Martinsberg",
+      "column": "FS\u00dc 9 Martinsberg"
+    },
+    {
+      "id": "fsu-90-thor-straten",
+      "name": "FS\u00dc 90 Thor Straten",
+      "column": "FS\u00dc 90 Thor Straten"
+    },
+    {
+      "id": "fsu-91-schule-adelby",
+      "name": "FS\u00dc 91 Schule Adelby",
+      "column": "FS\u00dc 91 Schule Adelby"
+    },
+    {
+      "id": "fsu-92-hele-mond",
+      "name": "FS\u00dc 92 Hele Mond",
+      "column": "FS\u00dc 92 Hele Mond"
+    },
+    {
+      "id": "fsu-93-gartenstadt-w",
+      "name": "FS\u00dc 93 Gartenstadt W",
+      "column": "FS\u00dc 93 Gartenstadt W"
+    },
+    {
+      "id": "fsu-94-sunderup-nord",
+      "name": "FS\u00dc 94 S\u00fcnderup Nord",
+      "column": "FS\u00dc 94 S\u00fcnderup Nord"
+    },
+    {
+      "id": "fsu-95-kauslund",
+      "name": "FS\u00dc 95 Kauslund",
+      "column": "FS\u00dc 95 Kauslund"
+    },
+    {
+      "id": "fsu-95-wees",
+      "name": "FS\u00dc 95 Wees",
+      "column": "FS\u00dc 95 Wees"
+    },
+    {
+      "id": "fsu-96-stralsunder-s",
+      "name": "FS\u00dc 96 Stralsunder S",
+      "column": "FS\u00dc 96 Stralsunder S"
+    },
+    {
+      "id": "fsu-97-erdbeerfeld",
+      "name": "FS\u00dc 97 Erdbeerfeld",
+      "column": "FS\u00dc 97 Erdbeerfeld"
+    },
+    {
+      "id": "fsu-98-norrmark",
+      "name": "FS\u00dc 98 N\u00f6rrmark",
+      "column": "FS\u00dc 98 N\u00f6rrmark"
+    },
+    {
+      "id": "fsu-99-freiland",
+      "name": "FS\u00dc 99 Freiland",
+      "column": "FS\u00dc 99 Freiland"
+    }
+  ]
+}

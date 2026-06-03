@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data — raw CSVs can be large; keep processed small files
+data/raw/
+projects/**/data/raw/
+
+# Trained model files (can be regenerated with train_multi_horizon.py)
+# Legacy top-level location (pre multi-project migration)
+models/**/*.pkl
+models/**/*.joblib
+models/**/*.lgb
+models/**/*.txt
+# Per-project model binaries — keep meta.json / registry.json tracked
+projects/**/models/**/*.pkl
+projects/**/models/**/*.joblib
+projects/**/models/**/*.lgb
+projects/**/models/**/*.txt
+# Exception: Sønderborg is the bundled demo project — ship its models in-repo
+!projects/sonderborg/models/**/*.pkl
+
+# SQLite live-forecast logs (generated at runtime, not source)
+*.db
+**/*.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+nohup.out

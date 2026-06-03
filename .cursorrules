@@ -1,0 +1,76 @@
+# Project Rules for Claude in Cursor
+
+## Git Discipline
+- Never work directly on `main` or `master`
+- Always create a new branch before making changes: `experiment/[short-description]`
+- Run `git status` before starting any task — commit or stash pending changes first
+- Confirm active branch before touching any files
+- Use `git revert` to undo, never `git reset --hard`
+- Commit frequently with clear messages: `git commit -m "feat: add user validation"`
+
+## Parallel Agent Safety
+- Before touching any file, state which files you intend to modify
+- Never modify files outside the explicitly agreed scope
+- If a required change is outside scope, stop and ask rather than proceeding
+- One agent per file — never edit a file another agent owns in this session
+
+## Code Changes
+- Make the smallest change that solves the problem
+- Don't refactor code outside the scope of the current task
+- Never delete code — comment it out and explain why, let the user decide
+- Always explain what you're about to do before doing it
+- If a change affects more than 3 files, pause and confirm with the user first
+
+## Architecture
+- Respect existing patterns and conventions in the codebase — don't introduce new ones without asking
+- Keep files small and single-responsibility
+- Changes to shared interfaces or types must be flagged explicitly before proceeding
+
+## Before Starting Any Task
+1. Confirm the branch
+2. State the files you'll touch
+3. Summarize the approach in one sentence
+4. Get implicit or explicit confirmation, then proceed
+
+## When Uncertain
+- Stop and ask rather than guess
+- Prefer the simpler solution when two approaches seem equal
+- If something feels risky, say so before doing it
+
+---
+
+## Project-Specific: District Heating Forecaster
+
+### Model & Data Conventions
+- The production inference path is always `get_mh_forecast_window()` — 48 direct LightGBM models
+- The single-model fallback (`get_forecast_window`) is legacy code; do not extend it
+- Feature prefix convention: lag/roll features at snapshot time `t` have no prefix; features at target time `t+h` use the `fc_` prefix
+- `MH_FEATURES = MH_LAG_COLS + [f"fc_{c}" for c in MH_WEATHER_COLS + MH_CALENDAR_COLS]` — always 30 features; never add features without retraining all 48 models
+- Training split: 2020–2023 train, 2024 test — never train on 2024 data
+
+### Caching
+- `init()` in `app.py` is decorated with `@st.cache_resource`; it runs once per server start
+- After retraining models, the Streamlit server must be **fully restarted** — hot-reload does not flush `@st.cache_resource`
+- When changing `MH_FEATURES`, always retrain before restarting the dashboard; a feature-count mismatch causes a `LightGBMError` at inference time
+
+### Streamlit / Plotly Conventions
+- Charts use Plotly with two subplots (demand + weather); the shared x-axis sits at the **top** of subplot 1 only
+- `subplot_titles` must be omitted when using a top x-axis — they overlap with tick labels
+- `showticklabels=True` must be set explicitly on the row-1 x-axis to override the `shared_xaxes` suppression
+- Day-band annotations are drawn above the axis at `y=1.13` using `fig.add_annotation`
+- Hover values are rounded to whole numbers via `hovertemplate`
+- All colours come from the Gradyent-inspired palette; do not introduce new hex colours without discussion
+- Legends are placed outside the chart area on the right (`legend` for demand, `legend2` for weather)
+
+### Weather API (Open-Meteo)
+- Current/future dates → `/v1/forecast`; historical/time-travel dates → `/v1/historical-forecast`
+- Derived features must be recomputed from raw API output: `heating_degrees`, `temp_change_3h`, `wind_sin`, `wind_cos`
+- The API call is optional (sidebar checkbox); always provide a graceful fallback to oracle weather from the CSV
+
+### Git History Reference
+- Zenodo dataset: https://zenodo.org/records/17177421
+- GitHub repo: https://github.com/herbvibe/district-heating-forecaster
+- Key commits to know:
+  - `7ba6fa9` — added short-term lags (2h/3h/6h/12h) to all MH models
+  - `88d3cd2` — real precipitation (rain+snow) from Open-Meteo
+  - `8578cd6` — updated meta.json after retraining with 30-feature models

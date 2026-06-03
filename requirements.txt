@@ -1,0 +1,9 @@
+pandas>=2.0,<3
+numpy>=1.26,<2
+scikit-learn>=1.4,<2
+lightgbm>=4.3,<5
+streamlit>=1.35,<2
+plotly>=5.20,<6
+holidays>=0.46,<1
+requests>=2.31,<3
+openpyxl>=3.1,<4
