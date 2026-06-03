@@ -197,8 +197,14 @@ def load_multi_horizon_models() -> dict[int, lgb.LGBMRegressor]:
     for h in range(1, 49):
         p = MH_MODELS_DIR / f"lgbm_h{h:02d}.pkl"
         if p.exists():
-            with open(p, "rb") as f:
-                models[h] = pickle.load(f)
+            try:
+                with open(p, "rb") as f:
+                    models[h] = pickle.load(f)
+            except Exception:
+                try:
+                    p.unlink()
+                except OSError:
+                    pass
     return models
 
 

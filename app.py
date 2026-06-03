@@ -1654,8 +1654,15 @@ def _load_models_from_dir(pkl_dir_str: str) -> tuple[dict, list[str], "pd.DataFr
     for h in range(1, 49):
         p = pkl_dir / f"lgbm_h{h:02d}.pkl"
         if p.exists():
-            with open(p, "rb") as _f:
-                _models[h] = _pickle.load(_f)
+            try:
+                with open(p, "rb") as _f:
+                    _models[h] = _pickle.load(_f)
+            except Exception:
+                # Corrupted/truncated pkl — delete so it can be retrained
+                try:
+                    p.unlink()
+                except OSError:
+                    pass
     return _models, _features, _eval_df
 
 
