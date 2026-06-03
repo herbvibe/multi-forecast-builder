@@ -369,8 +369,14 @@ def init(project_id: str, pkl_dir: str):
     for h in range(1, 49):
         p = pkl_path / f"lgbm_h{h:02d}.pkl"
         if p.exists():
-            with open(p, "rb") as fh:
-                mh_models[h] = pickle.load(fh)
+            try:
+                with open(p, "rb") as fh:
+                    mh_models[h] = pickle.load(fh)
+            except Exception:
+                try:
+                    p.unlink()
+                except OSError:
+                    pass
 
     mh_eval = None
     mh_features = list(MH_FEATURES)
