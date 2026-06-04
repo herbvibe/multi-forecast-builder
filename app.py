@@ -3015,7 +3015,7 @@ def _render_hist_tab(project, df_raw, mh_models, mh_features, mh_eval, mc_sample
     if snapshot_dt is None:
         snapshot_dt = _render_snapshot_picker(df_raw, project, key_prefix="")
 
-    horizon = int(st.session_state.forecast_horizon)
+    horizon = int(st.session_state.get("forecast_horizon", 48))
 
     # ── Fetch weather forecast (if enabled) ──────────────────────────────────────
     # Open-Meteo's historical-forecast archive only covers ~2022 onward. For older
