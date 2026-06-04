@@ -22,15 +22,17 @@ if [ -d "$BUNDLE_DIR" ]; then
 fi
 
 # Download pre-trained models if not already on the volume
-MODELS_MARKER="$VOLUME_DIR/.models_seeded"
+MODELS_MARKER="$VOLUME_DIR/.models_seeded_v2"
 if [ ! -f "$MODELS_MARKER" ]; then
     echo "[start] Downloading pre-trained models from GitHub release..."
-    curl -sL "$MODELS_URL" -o /tmp/m.tar.gz \
+    curl -L "$MODELS_URL" -o /tmp/m.tar.gz \
+        && echo "[start] Download complete ($(du -sh /tmp/m.tar.gz | cut -f1))" \
         && tar -xzf /tmp/m.tar.gz -C /app \
+        && echo "[start] Extraction complete." \
         && rm /tmp/m.tar.gz \
         && touch "$MODELS_MARKER" \
-        && echo "[start] Models downloaded and extracted." \
-        || echo "[start] WARNING: model download failed, app will start without pre-trained models."
+        && echo "[start] Models seeded successfully." \
+        || echo "[start] WARNING: model download/extraction failed."
 else
     echo "[start] Models already seeded (marker found), skipping download."
 fi
